@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return chunks;
     }
 
-    // 3. Reusable Discrete Chunk Reveal Function
-    function splitGlitchText(element) {
+        // 3. Reusable Discrete Chunk Reveal Function
+    function splitGlitchText(element, staggerSpeed = 0.12) {
         if (!element) return;
         const text = element.textContent;
         element.innerHTML = ''; 
@@ -111,15 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const chunkBox = document.createElement('span');
                 chunkBox.className = 'chunk-box';
                 
-                // Box starts sliding in immediately on its turn
+                // ONLY the box gets the delay. Text is already visible behind it.
                 chunkBox.style.animationDelay = `${delay}s`;
-                // Text starts revealing AFTER the box has left (increased delay to 0.8s for a noticeable lag)
-                chunkTextEl.style.animationDelay = `${delay+0.36}s`;
                 
                 chunkBlock.appendChild(chunkTextEl);
                 chunkBlock.appendChild(chunkBox);
                 wordWrap.appendChild(chunkBlock);
-                delay += 0.12;
+                delay += staggerSpeed; 
             });
             element.appendChild(wordWrap);
             delay += 0.2;
