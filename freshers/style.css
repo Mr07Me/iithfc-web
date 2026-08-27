@@ -487,13 +487,53 @@ body {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+    /* Header */
     #main-header { grid-template-columns: 1fr 1fr; padding: 15px 20px; }
     .nav-center { display: none; }
     .nav-left ul, .nav-right ul { gap: 15px; }
     .nav-left ul li:nth-child(n+3) { display: none; } 
+    
+    /* Intro Loader Title (Forces FRESHERS / LEAGUE to stack huge) */
+    .intro-text { 
+        font-size: 3.5rem; /* Forces it to be huge on phones */
+        line-height: 1;
+    }
+
+    /* Fix empty space below the hero banner on phones */
+    #club-settled-section.expanded { 
+        height: 15vh; /* Shrinks the gap from 50vh to 15vh */
+    }
+
+    /* Announcement Hero Text */
+    #hero-section.announcement-hero .hero-title {
+        font-size: 2rem; /* Fits nicely on phone screens */
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+    
+    /* Footer */
     .footer-headline { font-size: 2.5rem; flex: 0 0 100%; }
     .footer-top-container { flex-direction: column; align-items: flex-start; }
     .footer-socials { text-align: left; }
+    .logo-img { height: 40px; }
+
+    /* Make the Registration Form Box Phone-Friendly */
+    .form-box {
+        padding: 30px 20px; /* Less padding so inputs have more room */
+        margin: 100px 15px 40px; /* Smaller margins */
+    }
+    .form-header {
+        font-size: 1.8rem; /* Smaller header text */
+        margin-bottom: 25px;
+    }
+    .register-form {
+        gap: 25px; /* Less gap between input fields */
+    }
+    .form-row {
+        grid-template-columns: 1fr; 
+        gap: 25px; /* Stack Roll Number and Email vertically */
+    }
+}
 /* --- HIDE HEADER ON SCROLL DOWN --- */
 #main-header {
     transform: translateY(0);
