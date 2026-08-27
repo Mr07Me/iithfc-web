@@ -359,11 +359,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 5. Header Scroll Behavior
+    /    // 5. Header Scroll Behavior (Hide on scroll down, show on scroll up)
     const header = document.getElementById('main-header');
+    let lastScrollTop = 0;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
+        let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+            // Scrolling DOWN past 100px: Hide the header
+            header.classList.add('nav-hidden');
+        } else {
+            // Scrolling UP or at the top: Show the header
+            header.classList.remove('nav-hidden');
+        }
+
+        // Keep the transparent-to-solid background logic
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Prevent negative scrolling on Mac/bounce effects
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
     });
 
     // 6. Hero Sequential Scroll Logic
