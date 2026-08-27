@@ -75,44 +75,24 @@ body {
     flex-wrap: wrap;
 }
 
-/* --- DISCRETE CHUNK MECHANICAL REVEAL --- */
+/* --- DISCRETE CHUNK MECHANICAL REVEAL (Smooth Uncover) --- */
 .word-wrap { display: inline-block; margin-right: 0.3em; }
 .chunk-block { display: inline-block; position: relative; overflow: hidden; vertical-align: top; line-height: 1.1; padding: 0.1em 0; }
 
 .chunk-text { 
     display: inline-block; 
-    opacity: 1; /* Text is ALWAYS visible, just hidden behind the box */
+    opacity: 1; /* Text is fully visible from the start, just hidden behind the box */
 }
 
 .chunk-box {
     position: absolute; top: -0.1em; left: -0.05em; width: calc(100% + 0.1em); height: calc(100% + 0.2em);
     background-color: #ffffff; border-right: 3px solid var(--home-color); z-index: 2; 
-    transform: translateX(-101%); /* Starts off-screen left */
+    transform: translateX(0); /* Box starts covering the text */
 }
 
-/* Box slides in, pauses, then slides right to UNCOVER the text */
+/* Box slides away smoothly to uncover the text */
 .glitch-animate .chunk-box {
-    animation: boxSlideIn 0.3s steps(2, end) forwards, chunkSlideRight 0.4s steps(2, end) 0.4s forwards;
-}
-
-@keyframes boxSlideIn {
-    0% { transform: translateX(-101%); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes chunkSlideRight {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(120%); }
-}
-
-/* Box slides in, pauses, then snaps right */
-.glitch-animate .chunk-box {
-    animation: boxSlideIn 0.2s steps(2, end) forwards, chunkSlideRight 0.2s steps(2, end) 0.3s forwards;
-}
-
-@keyframes boxSlideIn {
-    0% { transform: translateX(-101%); }
-    100% { transform: translateX(0); }
+    animation: chunkSlideRight 0.4s ease-out forwards;
 }
 
 @keyframes chunkSlideRight {
