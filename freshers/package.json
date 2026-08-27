@@ -1,7 +1,7 @@
 {
-  "name": "iitfc-registration",
+  "name": "iitfc-freshers",
   "version": "1.0.0",
-  "description": "IIT Football Club Backend",
+  "description": "IIT Football Club Freshers League Registration",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
