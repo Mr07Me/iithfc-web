@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshers League - IIT FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Intro Loader -->
+    <div id="intro-loader">
+        <div class="intro-content">
+            <div class="intro-text" id="dynamic-glitch-text" data-glitch-text></div>
+            <div class="intro-underline"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <nav class="nav-left font-secondary">
+            <ul>
+                <li class="nav-item" id="announcements-nav"><a href="index.html">Announcements</a></li>
+                <li class="nav-item">
+                    <a href="#">Season</a>
+                    <div class="dropdown-box">
+                        <ul>
+                            <li><a href="announcement.html?id=freshers-league">Freshers League</a></li>
+                            <li><a href="#">Milan</a></li>
+                            <li><a href="#">Inter IIT</a></li>
+                            <li><a href="#">Diesta</a></li>
+                            <li><a href="#">IFL</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#">Club</a><div class="dropdown-box"><ul><li><a href="#">Achievements</a></li></ul></div></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="logo-center"><img src="https://z-cdn-media.chatglm.cn/files/90717da4-8aac-431a-a9bf-e1c36e1f0367.png?auth_key=1885921513-2d29cc2f19744f529911cfd716daf83a-0-5fbab853ad37092aad9bbab18a6935c8" alt="Logo" class="logo-img"></a>
+        <nav class="nav-right font-secondary">
+            <ul>
+                <li class="nav-item"><a href="team.html">Team</a><div class="dropdown-box"><ul><li><a href="team.html">Team</a></li><li><a href="#">Contacts</a></li></ul></div></li>
+                <li class="nav-item"><a href="#">NSO</a></li>
+                <li class="nav-item"><a href="#">Media Hub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Stadium Tunnel) -->
+    <section id="hero-section" class="announcement-hero">
+        <div class="hero-bg" id="dynamic-hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title font-primary" id="dynamic-hero-title"></h1>
+            <a href="#" class="btn-register font-secondary" id="dynamic-register-btn">REGISTER NOW</a>
+        </div>
+    </section>
+
+    <!-- Settled Section -->
+    <section id="club-settled-section"></section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-top-container">
+            <div class="footer-headline-container">
+                <div class="footer-headline default-text" data-glitch-text>FORZA IIT</div>
+                <div class="footer-headline hover-text" data-glitch-text>GO IITH</div>
+            </div>
+            <div class="footer-socials font-secondary"><a href="#">Instagram</a><a href="#">Twitter</a><a href="#">YouTube</a></div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-nav font-secondary">
+            <div class="footer-col"><h3 class="font-primary">Announcements</h3><ul id="footer-announcements-list"></ul></div>
+            <div class="footer-col"><h3 class="font-primary">Season</h3><ul><li><a href="#">Freshers League</a></li><li><a href="#">Milan</a></li><li><a href="#">Inter IIT</a></li><li><a href="#">Diesta</a></li><li><a href="#">IFL</a></li></ul></div>
+            <div class="footer-col"><h3 class="font-primary">Team</h3><ul><li><a href="team.html">Team</a></li><li><a href="#">Contacts</a></li></ul></div>
+            <div class="footer-col"><h3 class="font-primary">Club</h3><ul><li><a href="#">Achievements</a></li></ul></div>
+        </div>
+        <p class="copyright font-secondary">&copy; 2024 IIT Football Club. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - IIT FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="scrolled">
+        <nav class="nav-left font-secondary">
+            <ul>
+                <li class="nav-item"><a href="index.html">Announcements</a></li>
+                <li class="nav-item"><a href="#">Season</a></li>
+                <li class="nav-item"><a href="#">Club</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="logo-center"><img src="https://z-cdn-media.chatglm.cn/files/90717da4-8aac-431a-a9bf-e1c36e1f0367.png?auth_key=1885921513-2d29cc2f19744f529911cfd716daf83a-0-5fbab853ad37092aad9bbab18a6935c8" alt="Logo" class="logo-img"></a>
+        <nav class="nav-right font-secondary">
+            <ul>
+                <li class="nav-item"><a href="team.html">Team</a></li>
+                <li class="nav-item"><a href="#">NSO</a></li>
+                <li class="nav-item"><a href="#">Media Hub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Registration Section with Hero Background -->
+    <section id="register-section">
+        <div class="register-bg"></div> <!-- Full screen background image -->
+        
+        <!-- Beautiful Bordered Form Box -->
+        <div class="form-box">
+            <h2 class="form-header font-primary">REGISTER HERE</h2>
+            
+            <form class="register-form font-secondary" id="reg-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="roll">Roll Number</label>
+                    <input type="text" id="roll" name="roll" placeholder="Enter your roll number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position (Attacker, Defender, etc.)</label>
+                    <input type="text" id="position" name="position" placeholder="e.g. Goalkeeper, Midfielder, Forward" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Previous Experiences</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Write a small paragraph about your playing history..."></textarea>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn-submit-cute font-secondary">Submit Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-top-container">
+            <div class="footer-headline-container">
+                <div class="footer-headline default-text" data-glitch-text>FORZA IIT</div>
+                <div class="footer-headline hover-text" data-glitch-text>GO IITH</div>
+            </div>
+            <div class="footer-socials font-secondary"><a href="#">Instagram</a><a href="#">Twitter</a><a href="#">YouTube</a></div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-nav font-secondary">
+            <div class="footer-col"><h3 class="font-primary">Announcements</h3><ul><li><a href="#">Freshers League</a></li></ul></div>
+            <div class="footer-col"><h3 class="font-primary">Season</h3><ul><li><a href="#">Freshers League</a></li></ul></div>
+            <div class="footer-col"><h3 class="font-primary">Team</h3><ul><li><a href="team.html">Team</a></li></ul></div>
+            <div class="footer-col"><h3 class="font-primary">Club</h3><ul><li><a href="#">Achievements</a></li></ul></div>
+        </div>
+        <p class="copyright font-secondary">&copy; 2024 IIT Football Club. All Rights Reserved.</p>
+    </footer>
+
+    <!-- GSAP Core (Still needed for smooth form fade-in) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
