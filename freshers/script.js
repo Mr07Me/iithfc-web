@@ -359,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /    // 5. Header Scroll Behavior (Hide on scroll down, show on scroll up)
+   // 5. Header Scroll Behavior (Hide on scroll down, show on scroll up)
     const header = document.getElementById('main-header');
     let lastScrollTop = 0;
 
