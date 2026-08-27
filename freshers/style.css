@@ -494,4 +494,12 @@ body {
     .footer-headline { font-size: 2.5rem; flex: 0 0 100%; }
     .footer-top-container { flex-direction: column; align-items: flex-start; }
     .footer-socials { text-align: left; }
+/* --- HIDE HEADER ON SCROLL DOWN --- */
+#main-header {
+    transform: translateY(0);
+    transition: transform 0.4s var(--ease-cinematic), background-color 0.4s var(--ease-cinematic), box-shadow 0.4s var(--ease-cinematic);
+}
 
+#main-header.nav-hidden {
+    transform: translateY(-150px); /* Slides the header completely out of view */
+}
