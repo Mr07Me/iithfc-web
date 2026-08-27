@@ -497,9 +497,3 @@ body {
     .logo-img { height: 40px; }
     .intro-text { font-size: clamp(2rem, 12vw, 5rem); }
 }
-
-/* --- SLOW DOWN FOOTER TRANSITION --- */
-.footer-headline.glitch-animate .chunk-box {
-    /* Slides in over 0.4s, waits 0.6s, then slides out over 0.5s */
-    animation: boxSlideIn 0.4s steps(2, end) forwards, chunkSlideRight 0.5s steps(2, end) 0.6s forwards;
-}
