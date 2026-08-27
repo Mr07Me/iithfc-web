@@ -98,7 +98,7 @@ body {
 
 /* Box slides in, pauses, then snaps right */
 .glitch-animate .chunk-box {
-    animation: boxSlideIn 0.5s steps(2, end) forwards, chunkSlideRight 0.5s steps(2, end) 0.3s forwards;
+    animation: boxSlideIn 0.7s steps(2, end) forwards, chunkSlideRight 0.7s steps(2, end) 0.3s forwards;
 }
 
 @keyframes boxSlideIn {
