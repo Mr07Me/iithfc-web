@@ -495,13 +495,13 @@ body {
     
     /* Intro Loader Title (Forces FRESHERS / LEAGUE to stack huge) */
     .intro-text { 
-        font-size: 3.5rem; /* Forces it to be huge on phones */
+        font-size: 5.0rem; /* Forces it to be huge on phones */
         line-height: 1;
     }
 
     /* Fix empty space below the hero banner on phones */
     #club-settled-section.expanded { 
-        height: 15vh; /* Shrinks the gap from 50vh to 15vh */
+        height: 25vh; /* Shrinks the gap from 50vh to 15vh */
     }
 
     /* Announcement Hero Text */
