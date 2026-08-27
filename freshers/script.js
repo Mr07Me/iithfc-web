@@ -91,23 +91,27 @@ document.addEventListener("DOMContentLoaded", () => {
         return chunks;
     }
 
-        // 3. Reusable Discrete Chunk Reveal Function
+            // 3. Reusable Discrete Chunk Reveal Function
     function splitGlitchText(element, staggerSpeed = 0.12) {
         if (!element) return;
         const text = element.textContent;
         element.innerHTML = ''; 
         const words = text.split(' '); 
         let delay = 0;
+        
         words.forEach((word) => {
             const wordWrap = document.createElement('span');
             wordWrap.className = 'word-wrap';
             const chunks = getChunks(word);
+
             chunks.forEach(chunkText => {
                 const chunkBlock = document.createElement('span');
                 chunkBlock.className = 'chunk-block';
+                
                 const chunkTextEl = document.createElement('span');
                 chunkTextEl.className = 'chunk-text';
                 chunkTextEl.textContent = chunkText;
+                
                 const chunkBox = document.createElement('span');
                 chunkBox.className = 'chunk-box';
                 
@@ -117,7 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 chunkBlock.appendChild(chunkTextEl);
                 chunkBlock.appendChild(chunkBox);
                 wordWrap.appendChild(chunkBlock);
-                delay += staggerSpeed; 
+                
+                delay += staggerSpeed;
             });
             element.appendChild(wordWrap);
             delay += 0.2;
@@ -415,13 +420,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 7. Footer Hover Glitch
+        // 7. Footer Hover Glitch
     const footerContainer = document.querySelector('.footer-headline-container');
     const defaultFooterText = document.querySelector('.footer-headline.default-text');
     const hoverFooterText = document.querySelector('.footer-headline.hover-text');
 
     function triggerGlitch(element) {
-        splitGlitchText(element);
+        // 0.3 means 300ms delay between each box chunk (slower than default 0.12)
+        splitGlitchText(element, 0.3); 
         void element.offsetWidth; 
         element.classList.add('glitch-animate');
     }
@@ -442,4 +448,3 @@ document.addEventListener("DOMContentLoaded", () => {
         footerContainer.addEventListener('mouseenter', () => triggerGlitch(hoverFooterText));
         footerContainer.addEventListener('mouseleave', () => triggerGlitch(defaultFooterText));
     }
-});
