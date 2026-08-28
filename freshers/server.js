@@ -30,8 +30,15 @@ app.post('/api/register', (req, res) => {
             console.error('Error saving data:', err);
             return res.status(500).json({ success: false, message: 'Error saving data.' });
         }
-        console.log(`Registration received: ${name} (${roll})`);
-        res.json({ success: true, message: 'Registration saved successfully!' });
+       console.log(
+    `Registration received:
+Name: ${name}
+Roll: ${roll}
+Email: ${email}
+Phone: ${phone}
+Position: ${position}
+Experience: ${experience}`
+);
     });
 });
 
